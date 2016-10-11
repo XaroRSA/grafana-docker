@@ -12,6 +12,7 @@ dependencies:
     - "~/docker"
 
   pre:
+    - ./deploy.sh
     - docker info
     - > 
       if [ -n "${CREATE_MASTER_IMAGE}" ]; then
@@ -36,5 +37,3 @@ deployment:
         else
           ./push_to_docker_hub.sh
         fi
-      
-      - ./deploy.sh
