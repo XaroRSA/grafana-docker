@@ -14,11 +14,10 @@ dependencies:
   pre:
     - docker info
     - > 
-      ./deploy.sh
       if [ -n "${CREATE_MASTER_IMAGE}" ]; then
-        ./build.sh latest master
+./deploy.sh
       else
-        ./build.sh
+./deploy.sh
       fi
 
 test:
