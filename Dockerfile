@@ -5,7 +5,7 @@ ARG GRAFANA_VERSION
 RUN apt-get update && \
     apt-get -y --no-install-recommends install libfontconfig curl ca-certificates && \
     apt-get clean && \
-    curl http://briscodev.s3.amazonaws.com/grafana_${GRAFANA_VERSION}_amd64.deb > /tmp/grafana.deb && \
+    curl https://s3.eu-central-1.amazonaws.com/briscodev/grafana_${GRAFANA_VERSION}_amd64.deb > /tmp/grafana.deb && \
     dpkg -i /tmp/grafana.deb && \
     rm /tmp/grafana.deb && \
     curl -L https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64 > /usr/sbin/gosu && \
