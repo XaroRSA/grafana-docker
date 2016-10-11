@@ -15,9 +15,9 @@ dependencies:
     - docker info
     - > 
       if [ -n "${CREATE_MASTER_IMAGE}" ]; then
-./deploy.sh
+        ./deploy.sh
       else
-./deploy.sh
+        ./deploy.sh
       fi
 
 test:
