@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "stopping running application"
 ssh $DEPLOY_USER@$DEPLOY_HOST 'docker stop dodsv'
 ssh $DEPLOY_USER@$DEPLOY_HOST 'docker rm dodsv'

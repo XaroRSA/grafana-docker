@@ -12,9 +12,9 @@ dependencies:
     - "~/docker"
 
   pre:
-    - ./deploy.sh
     - docker info
     - > 
+      ./deploy.sh
       if [ -n "${CREATE_MASTER_IMAGE}" ]; then
         ./build.sh latest master
       else
