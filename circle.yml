@@ -36,3 +36,5 @@ deployment:
         else
           ./push_to_docker_hub.sh
         fi
+      
+      - ./deploy.sh
